@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"], input[type="date"], input[type="number"], select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        h1{
+            text-align: center;
+        }
+        .datos{
+            background-color: rgb(131, 93, 167);
+        }
+        .acceso{
+            background-color: rgb(114, 114, 215);
+        }
+        .documentos{
+            background-color: rgb(95, 212, 95);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>INFORMACION DE ACCESO A</h1>
+    <h1>LOS CICLOS FORMATIVOS DE GRADO SUPERIOR</h1>
+
+    <fieldset class="datos">
+        <legend>Datos Personales</legend>
+        
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" required>
+
+        <label for="dni">DNI:</label>
+        <input type="text" id="dni" name="dni" required>
+
+        <label for="lugarNacimiento">Lugar de Nacimiento:</label>
+        <input type="text" id="lugarNacimiento" name="lugarNacimiento" required>
+
+        <label for="provincia">Provincia:</label>
+        <select id="provincia" name="provincia" required>
+            <option value="">Seleccione una opción</option>
+            <option value="madrid">Madrid</option>
+            <option value="barcelona">Barcelona</option>
+            <option value="valencia">Valencia</option>
+            <option value="sevilla">Sevilla</option>
+            <option value="zaragoza">Zaragoza</option>
+        </select>
+
+        <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" required>
+
+        <label for="codigoPostal">Código Postal:</label>
+        <input type="number" id="codigoPostal" name="codigoPostal" required>
+    </fieldset>
+
+    <fieldset class="acceso">
+        <legend>Forma de Acceso</legend>
+
+        <label><input type="radio" name="acceso" value="directo" required> Directo</label>
+
+        <div id="directoOpciones">
+            <label><input type="radio" name="directoTipo" value="bachillerato"> Bachillerato</label>
+            <label><input type="radio" name="directoTipo" value="universidad"> Universidad</label>
+            <label><input type="radio" name="directoTipo" value="gradoMedio"> Grado Medio</label>
+            <label><input type="radio" name="directoTipo" value="otros"> Otros</label>
+        </div>
+
+        <label><input type="radio" name="acceso" value="pruebaLibre"> Prueba Libre</label>
+    </fieldset>
+
+    <fieldset class="documentos">
+        <legend>Documentos Adjuntados</legend>
+
+        <label><input type="checkbox" name="documentos" value="fotocopiaDNI"> Fotocopia de DNI</label>
+        <label><input type="checkbox" name="documentos" value="certificadoAcademico"> Certificado Académico</label>
+        <label><input type="checkbox" name="documentos" value="otrosDocumentos"> Otros Documentos</label>
+    </fieldset>
+
+    <button type="submit">Enviar</button>
+
+</body>
+</html>
